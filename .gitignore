@@ -106,4 +106,5 @@ dist
 .idea/
 
 02-write-file/output.txt
+05-merge-styles/project-dist/bundle.css
 
