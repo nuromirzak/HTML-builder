@@ -104,3 +104,6 @@ dist
 .tern-port
 
 .idea/
+
+02-write-file/output.txt
+
