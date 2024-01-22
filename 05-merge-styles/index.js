@@ -5,8 +5,9 @@ const stylesDir = path.join(__dirname, 'styles');
 const outputDir = path.join(__dirname, 'project-dist');
 const outputFile = path.join(outputDir, 'bundle.css');
 
-async function createBundle() {
+async function createCssBundle(stylesDir, outputFile) {
   try {
+    const outputDir = path.dirname(outputFile);
     await fs.promises.mkdir(outputDir, { recursive: true });
 
     const files = await fs.promises.readdir(stylesDir, { withFileTypes: true });
@@ -29,4 +30,6 @@ async function createBundle() {
   }
 }
 
-createBundle();
+createCssBundle(stylesDir, outputFile);
+
+module.exports = createCssBundle;
